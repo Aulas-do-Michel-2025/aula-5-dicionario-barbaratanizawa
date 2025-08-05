@@ -22,26 +22,23 @@ Se não existir, imprima: "Gene não encontrado."
 Exemplo:
 
 Entrada:
-
 Digite o nome do gene: BRCA1
 
 Saída:
-
-O tamanho do gene BRCA1 é [TAMANHO] pb."
+O tamanho do gene BRCA1 é [TAMANHO] pb.
 
 ------------
 
 Exemplo:
 
 Entrada:
-
 Digite o nome do gene: BRCA3
 
 Saída:
-
 Gene não encontrado.
 """
 
+# Dicionário com os genes e seus tamanhos
 genes = {
     "BRCA1": 81188,
     "TP53": 19054,
@@ -55,4 +52,11 @@ genes = {
     "FMR1": 38000,
 }
 
-# Criar seu código a partir daqui
+# Solicita o nome do gene ao usuário
+nome = input("Digite o nome do gene: ")
+
+# Verifica se o gene está no dicionário
+if nome in genes:
+    print(f"O tamanho do gene {nome} é {genes[nome]} pb.")
+else:
+    print("Gene não encontrado.")
